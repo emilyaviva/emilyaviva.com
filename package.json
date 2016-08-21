@@ -1,0 +1,62 @@
+{
+  "private": true,
+  "name": "emilyaviva.com",
+  "description": "My professional website - Emily Aviva Kapor-Mater",
+  "version": "0.5.0",
+  "author": {
+    "name": "Emily Aviva Kapor-Mater",
+    "email": "emily@emilyaviva.com",
+    "url": "http://emilyaviva.com"
+  },
+  "repository": {},
+  "bugs": {},
+  "keywords": [
+    "gatsby",
+    "static",
+    "professional",
+    "personal",
+    "website"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm -rf public/*",
+    "lint": "standard --verbose | snazzy",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve-build": "NODE_ENV=production gatsby build && gatsby serve-build"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "date-fns": "^1.3.0",
+    "font-awesome": "^4.6.3",
+    "gatsby": "^0.12.5",
+    "history": "^2.0.0",
+    "image-webpack-loader": "^2.0.0",
+    "js-yaml": "^3.6.0",
+    "markdown-it": "^7.0.1",
+    "markdown-it-abbr": "^1.0.3",
+    "markdown-it-attrs": "^0.6.3",
+    "markdown-it-deflist": "^2.0.1",
+    "markdown-it-footnote": "^3.0.1",
+    "markdown-it-sub": "^1.0.0",
+    "react-disqus-thread": "^0.4.0",
+    "react-typography": "^0.12.0",
+    "safe-access": "^0.1.0",
+    "toml-js": "0.0.8",
+    "typography": "^0.13.0",
+    "typography-plugin-code": "^0.13.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-1": "^6.13.0",
+    "snazzy": "^4.0.1",
+    "standard": "^8.0.0-beta.5"
+  }
+}
