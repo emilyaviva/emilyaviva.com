@@ -2,10 +2,9 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { TypographyStyle, GoogleFont } from 'react-typography'
-import typography from './utils/typography.js'
+import typography from './utils/typography'
 
 const BUILD_TIME = new Date().getTime()
-
 const css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
 
 const Html = ({ body, favicon }) =>

@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 const Template = ({ children }) =>
   <div>
-    <Headroom>
+    <Headroom disableInlineStyles>
       <SiteHeader />
     </Headroom>
     {children}

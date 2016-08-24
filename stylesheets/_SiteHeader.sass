@@ -1,4 +1,36 @@
 .SiteHeader
-  background: lightblue
+  font-family: $header-family
+  font-weight: 400
+  height: inherit
+  background-image: linear-gradient(#a7d4da, #fefefe)
+  padding: 12px 0 24px
   display: flex
-  
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  .site-name
+    height: 40px
+    margin-left: 12px
+    .name-title
+      font-size: 24px
+    .name-subtitle
+      font-size: 18px
+  .site-nav
+    height: 40px
+    margin-right: 12px
+    // padding-top: 6px
+    ul
+      display: flex
+      flex-direction: row
+      // padding-top: 6px
+      li
+        list-style-type: none
+        margin-left: 16px
+        opacity: 0.5
+        &:first-child
+          margin-left: 0
+        &:hover
+          opacity: 1
+  a
+    text-decoration: none
+    color: #181818
