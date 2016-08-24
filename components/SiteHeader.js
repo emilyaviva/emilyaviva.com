@@ -3,8 +3,8 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import Navigate from './Navigate'
 
-const Header = () =>
-  <header>
+const SiteHeader = () =>
+  <header className='SiteHeader'>
     <Link to={prefixLink('/')}>
       <h1>Emily Aviva Kapor-Mater</h1>
       <h2>Full-Stack Software Developer</h2>
@@ -12,4 +12,4 @@ const Header = () =>
     <Navigate />
   </header>
 
-export default Header
+export default SiteHeader

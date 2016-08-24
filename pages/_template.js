@@ -1,10 +1,13 @@
 import React from 'react'
-import Header from '../components/Header'
+import Headroom from 'react-headroom'
+import SiteHeader from '../components/SiteHeader'
 import Footer from '../components/Footer'
 
 const Template = ({ children }) =>
-  <div className='page-wrap'>
-    <Header />
+  <div>
+    <Headroom>
+      <SiteHeader />
+    </Headroom>
     {children}
     <Footer />
   </div>

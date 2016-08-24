@@ -6,6 +6,8 @@ import typography from './utils/typography.js'
 
 const BUILD_TIME = new Date().getTime()
 
+const css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
+
 const Html = ({ body, favicon }) =>
   <html lang='en'>
     <head>
@@ -16,6 +18,7 @@ const Html = ({ body, favicon }) =>
       <link rel='shortcut icon' href={favicon} />
       <TypographyStyle typography={typography} />
       <GoogleFont typography={typography} />
+      {css}
     </head>
     <body>
       <div id='react-mount' dangerouslySetInnerHTML={{ __html: body }} />

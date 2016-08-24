@@ -4,6 +4,7 @@ import { config } from 'config'
 import { prefixLink } from 'gatsby-helpers'
 
 import 'font-awesome/scss/font-awesome.scss'
+import '../stylesheets/manifest.sass'
 
 const Index = () =>
   <DocumentTitle title={config.siteTitle}>
