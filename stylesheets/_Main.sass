@@ -1,6 +1,7 @@
 main
   max-width: $mobile
-  margin: 12px 12px 0 12px
+  margin: 12px auto 0
+  padding: 0 12px
   a
     text-decoration: none
     &:hover
@@ -8,8 +9,22 @@ main
   font-family: $body-family
   font-size: 16px
   color: #171717
-  font-weight: 300
+  font-weight: 400
+  em
+    font-weight: 400
+  strong
+    font-weight: 700
   h1, h2, h3, h4, h5, h6
     font-family: $header-family
     color: #262626
     font-weight: 700
+
+  &.about
+    .portrait
+      float: right
+      width: 230px
+      margin-left: 12px
+      padding-top: 12px
+      img
+        border-radius: 4%
+        opacity: 0.94
