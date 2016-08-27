@@ -6,6 +6,14 @@ import { prefixLink } from 'gatsby-helpers'
 import 'font-awesome/scss/font-awesome.scss'
 import '../stylesheets/manifest.sass'
 
+const competencies = [
+  { name: 'Front-end MV* development', values: ['React/Redux', 'Angular', 'Prototyping'] },
+  { name: 'Data visualization', values: ['D3', 'Victory', 'Open Data'] },
+  { name: 'Site generation', values: ['Gatsby', 'Webpack', 'Stateless component architecture'] },
+  { name: 'RESTful API and database programming', values: ['NodeJS', 'SQL', 'MongoDB'] },
+  { name: 'Test- and behavior-driven development', values: ['Enzyme', 'Mocha', 'Karma'] }
+]
+
 const Index = () =>
   <DocumentTitle title={config.siteTitle}>
     <main className='about'>
@@ -22,59 +30,16 @@ const Index = () =>
       </section>
       <section className='competencies'>
         <h3>Competencies</h3>
-        <ul className='major-list'>
-          <li>
-            Front-end client-side and MV* development
-            <ul className='sublist'>
-              <li>React</li>
-              <li>Redux</li>
-              <li>Angular</li>
-              <li>jQuery</li>
-              <li>Sass</li>
-              <li>CSS</li>
-              <li>HTML</li>
-            </ul>
-          </li>
-          <li>
-            Data visualization
-            <ul className='sublist'>
-              <li>D3</li>
-              <li>Victory</li>
-              <li>JSON</li>
-              <li>Open data</li>
-            </ul>
-          </li>
-          <li>
-            Static site generation
-            <ul className='sublist'>
-              <li>Gatsby</li>
-              <li>Webpack</li>
-              <li>Browserify</li>
-              <li>Stateless component achitecture</li>
-            </ul>
-          </li>
-          <li>
-            Backend RESTful API and database programming
-            <ul className='sublist'>
-              <li>Node</li>
-              <li>Express</li>
-              <li>Heroku</li>
-              <li>SQL</li>
-              <li>NoSQL</li>
-            </ul>
-          </li>
-          <li>
-            Test- and behavior-driven development
-            <ul className='sublist'>
-              <li>Webpack</li>
-              <li>Gulp</li>
-              <li>Mocha</li>
-              <li>Karma</li>
-              <li>Chai</li>
-              <li>Jasmine</li>
-            </ul>
-          </li>
-        </ul>
+        <table>
+          {competencies.map((c, i) =>
+            <tr key={i}>
+              <td><strong>{c.name}</strong></td>
+              <td>
+                {c.values.map((v, j) => <span className='competency-value'>{v}</span>)}
+              </td>
+            </tr>
+          )}
+        </table>
       </section>
     </main>
   </DocumentTitle>

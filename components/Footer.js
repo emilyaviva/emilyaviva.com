@@ -1,27 +1,23 @@
 import React from 'react'
 
+const footerItems = [
+  { href: 'github.com/gatsbyjs', icon: 'pencil', text: 'Built with Gatsby' },
+  { href: 'github.com/emilyaviva/emilyaviva.com', icon: 'code-fork', text: 'This website is open-source' },
+  { href: 'github.com/aerobatic.com', icon: 'cogs', text: 'Static hosted on Aerobatic' }
+]
+
 const Footer = () =>
-  <footer>
-    <div className='footer-body'>
-      <ul>
-        <li>
-          <a href='//github.com/gatsbyjs'>
-            <i className='fa fa-pencil' aria-hidden='true' />
-            Built with Gatsby
+  <footer className='Footer'>
+    <ul>
+      {footerItems.map((o, i) =>
+        <li key={i}>
+          <a href={`//${o.href}`}>
+            <i className={`fa fa-${o.icon}`} aria-hidden='true' />
+            <span className='footer-item-text'>{o.text}</span>
           </a>
         </li>
-        <li>
-          <i className='fa fa-code-fork' aria-hidden='true' />
-          This website is open-source
-        </li>
-        <li>
-          <a href='//aerobatic.com'>
-            <i className='fa fa-square' aria-hidden='true' />
-            Static hosting by Aerobatic
-          </a>
-        </li>
-      </ul>
-    </div>
+      )}
+    </ul>
   </footer>
 
 export default Footer

@@ -2,7 +2,7 @@
   font-family: $header-family
   font-weight: 400
   height: inherit
-  background-image: linear-gradient(#a7d4da, #fefefe)
+  background-image: linear-gradient($brand-primary, $brand-white)
   padding: 12px 0 24px
   display: flex
   flex-direction: row
@@ -18,11 +18,10 @@
   .site-nav
     height: 40px
     margin-right: 12px
-    // padding-top: 6px
+    padding-top: 6px
     ul
       display: flex
       flex-direction: row
-      // padding-top: 6px
       li
         list-style-type: none
         margin-left: 16px
@@ -33,4 +32,4 @@
           opacity: 1
   a
     text-decoration: none
-    color: #181818
+    color: $header-color

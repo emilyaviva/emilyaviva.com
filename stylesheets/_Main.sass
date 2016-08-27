@@ -1,4 +1,7 @@
 main
+  background: $brand-white
+  &:nth-child(odd)
+    background: $brand-primary
   max-width: $mobile
   margin: 12px auto 0
   padding: 0 12px
@@ -29,12 +32,13 @@ main
         border-radius: 4%
         opacity: 0.94
     .competencies
-      .major-list
-        .sublist
-          list-style-type: none
-          li
-            display: inline
-            &:not(:last-child)
-              margin-right: 6px
-              padding-right: 6px
-              border-right: 0.5px solid #ccc
+      table
+        tr
+          td
+            border: none
+            padding: 0 0 1px 0
+      .competency-value
+        &:not(:last-child)
+          margin-right: 12px
+          padding-right: 12px
+          border-right: 0.5px solid #ccc
