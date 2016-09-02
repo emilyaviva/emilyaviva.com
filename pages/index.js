@@ -9,13 +9,12 @@ import Contact from '../components/Contact'
 import 'font-awesome/scss/font-awesome.scss'
 import '../stylesheets/manifest.sass'
 
+const mains = [<About />, <Portfolio />, <Talks />, <Contact />]
+
 const Index = () =>
   <DocumentTitle title={config.siteTitle}>
     <div className='index-wrapper'>
-      <About />
-      <Portfolio />
-      <Talks />
-      <Contact />
+      {mains.map((p, i) => <div key={i} className='index-main-wrapper'>{p}</div>)}
     </div>
   </DocumentTitle>
 

@@ -31,7 +31,7 @@ const About = () =>
             <tr key={i}>
               <td><strong>{c.name}</strong></td>
               <td>
-                {c.values.map((v, j) => <span className='competency-value'>{v}</span>)}
+                {c.values.map((v, j) => <span key={j} className='competency-value'>{v}</span>)}
               </td>
             </tr>
           )}
