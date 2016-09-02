@@ -1,7 +1,7 @@
 main
   background: $brand-white
-  &:nth-child(odd)
-    background: $brand-primary
+  &:nth-child(even)
+    background: lighten($brand-primary, 10%)
   max-width: $mobile
   margin: 12px auto 0
   padding: 0 12px
@@ -11,7 +11,7 @@ main
       text-decoration: underline
   font-family: $body-family
   font-size: 16px
-  color: #171717
+  color: $main-color
   font-weight: 400
   em
     font-weight: 400
@@ -19,26 +19,5 @@ main
     font-weight: 700
   h1, h2, h3, h4, h5, h6
     font-family: $header-family
-    color: #262626
+    color: $headline-color
     font-weight: 700
-
-  &.about
-    .portrait
-      float: right
-      width: 230px
-      margin-left: 12px
-      padding-top: 12px
-      img
-        border-radius: 4%
-        opacity: 0.94
-    .competencies
-      table
-        tr
-          td
-            border: none
-            padding: 0 0 1px 0
-      .competency-value
-        &:not(:last-child)
-          margin-right: 12px
-          padding-right: 12px
-          border-right: 0.5px solid #ccc

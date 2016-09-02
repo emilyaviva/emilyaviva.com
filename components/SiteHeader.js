@@ -30,7 +30,7 @@ const SiteHeader = () =>
       <ul>
         {pages.map((p, i) =>
           <li key={i}>
-            <Link to={p.dest ? prefixLink(`/${p.dest}`) : '/'}>
+            <Link to={p.dest ? `#${p.dest}` : '/'}>
               {p.linkText || capitalize(p.dest)}
             </Link>
           </li>
