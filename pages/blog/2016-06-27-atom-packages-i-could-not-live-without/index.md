@@ -21,7 +21,7 @@ Atom has a way to use [EditorConfig](http://editorconfig.org/) with the [`editor
 
 One of the most useful packages is [`emmet`](https://atom.io/packages/emmet), which lets you expand abbreviations so you can avoid typing the same repetitive sequences over and over. This is particularly important when you're writing HTML or CSS.
 
-Another package you'll want for writing HTML is [`autoclose-html`](https://atom.io/packages/autoclose-html). When you type `<li>` it'll automatically add `</li>` for you. This also works when you're writing JSX
+Another package you'll want for writing HTML is [`autoclose-html`](https://atom.io/packages/autoclose-html). When you type `<li>` it'll automatically add `</li>` for you. This also works when you're writing JSX.
 
 I use [`sort-lines`](https://github.com/atom/sort-lines) for assisting with some extremely tedious sorting (obviously).
 

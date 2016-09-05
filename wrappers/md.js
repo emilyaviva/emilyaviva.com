@@ -15,7 +15,7 @@ class MarkdownWrapper extends React.Component {
     const post = this.props.route.page.data
     return (
       <DocumentTitle title={`${post.title} | ${config.siteTitle}`}>
-        <main className='markdown'>
+        <main className='BlogPost'>
           <section className='post-header'>
             <span className='date'>
               {format((post.date || new Date()), 'D MMMM YYYY')}
