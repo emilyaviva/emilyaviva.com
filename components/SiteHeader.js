@@ -5,10 +5,10 @@ import capitalize from 'lodash/capitalize'
 
 const pages = [
   { linkText: 'About' },
-  { dest: 'blog' },
+  { linkText: 'Blog', dest: '/blog' },
   { dest: 'portfolio' },
   { dest: 'talks' },
-  { dest: 'resume' },
+  { linkText: 'Resume', dest: '/resume' },
   { dest: 'contact' }
 ]
 
@@ -28,13 +28,18 @@ const SiteHeader = () =>
     </aside>
     <nav className='site-nav'>
       <ul>
-        {pages.map((p, i) =>
-          <li key={i}>
-            <Link to={p.dest ? `#${p.dest}` : '/'}>
-              {p.linkText || capitalize(p.dest)}
-            </Link>
-          </li>
-        )}
+        {pages.map((p, i) => {
+          const linkText = p.linkText || capitalize(p.dest)
+          const target = p.dest
+            ? p.dest.substr(0, 1) !== '/'
+              ? `/#${p.dest}`
+              : p.dest
+            : '/'
+          const linkElem = target.substr(0, 1) === '#'
+            ? <a href={target}>{linkText}</a>
+            : <Link to={target}>{linkText}</Link>
+          return <li key={i}>{linkElem}</li>
+        })}
       </ul>
     </nav>
   </header>

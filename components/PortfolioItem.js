@@ -10,4 +10,12 @@ const PortfolioItem = ({ name, href, imgSrc, imgAlt, desc }) =>
     <div style={{ clear: 'both' }} />
   </section>
 
+PortfolioItem.propTypes = {
+  name: React.PropTypes.string,
+  href: React.PropTypes.string,
+  imgSrc: React.PropTypes.string,
+  imgAlt: React.PropTypes.string,
+  desc: React.PropTypes.string
+}
+
 export default PortfolioItem

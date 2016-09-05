@@ -16,8 +16,8 @@ const Talks = () =>
     <PortfolioItem
       name='Learn to Love the JavaScript Ternary Operator'
       href='http://docs.google.com/presentation/d/15dZNCA-F8L-yk1vIcpNLpe-LvHoPmp_GRxo49VLzC30/'
-      imageSrc={prefixLink('/img/ternary.svg')}
-      imageAlt='A question mark followed by a colon.'
+      imgSrc={prefixLink('/img/ternary.svg')}
+      imgAlt='A question mark followed by a colon.'
       desc='The poor, misunderstood ternary operator comes in for a lot of hate. In this lightning talk, I show why you need not be afraid of it and how it can help programmers write better, cleaner, more functional JavaScript. This talk was presented at Code Fellows during Seattle Startup Week, 27 October 2015.'
     />
   </main>
