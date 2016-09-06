@@ -34,6 +34,22 @@
   "standard": {
     "parser": "babel-eslint"
   },
+  "_aerobatic": {
+    "router": [
+      {
+        "module": "webpage"
+      },
+      {
+        "module": "redirect",
+        "options": {
+          "/about": "/",
+          "/portfolio": "/#portfolio",
+          "/talks": "/#talks",
+          "/contact": "/#contact"
+        }
+      }
+    ]
+  },
   "dependencies": {
     "anchorate": "^1.1.0",
     "date-fns": "^1.3.0",
