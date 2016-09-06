@@ -78,3 +78,19 @@ MyComponent.propTypes = {
   // etc.
 }
 ```
+
+If we want to declare a functional, stateless component, *and* have that component be declared in an immutable style, doing so by means of declaring the component as a pure function requires us to use some method to return a copy of the component function with the props validation set on it. One way of doing so would be something like this:
+
+```javascript
+const MyComponent = ({ name, id }) =>
+  // etc.
+
+const MyComponentProps = {
+  name: React.PropTypes.object,
+  id: React.PropTypes.string
+}
+
+export default Object.assign(MyComponent, MyComponentProps)
+```
+
+There does not seem (yet…) to be a good way to do this in a single step, but there are several different ways to accomplish it nonetheless, with a minimum of added lines of code. It would be really neat to see an addition to the ECMAScript spec that would allow the setting of a property on a function at declaration time.
