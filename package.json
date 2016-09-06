@@ -8,8 +8,13 @@
     "email": "emily@emilyaviva.com",
     "url": "http://emilyaviva.com"
   },
-  "repository": {},
-  "bugs": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emilyaviva/emilyaviva.com"
+  },
+  "bugs": {
+    "url": "https://github.com/emilyaviva/emilyaviva.com/issues"
+  },
   "keywords": [
     "gatsby",
     "static",
