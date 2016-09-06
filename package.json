@@ -48,7 +48,12 @@
           "/contact": "/#contact"
         }
       }
-    ]
+    ],
+    "build": {
+      "engine": "npm",
+      "script": "build",
+      "output": "public"
+    }
   },
   "dependencies": {
     "anchorate": "^1.1.0",
