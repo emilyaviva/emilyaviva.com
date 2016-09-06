@@ -2,11 +2,11 @@ import React from 'react'
 import { prefixLink } from 'gatsby-helpers'
 
 const competencies = [
-  { name: 'Front-end MV* development', values: ['React/Redux', 'Angular', 'Prototyping'] },
+  { name: 'Front-end MV* development', values: ['React/Redux', 'Angular', 'jQuery', 'Prototyping'] },
   { name: 'Data visualization', values: ['D3', 'Victory', 'Open Data'] },
   { name: 'Site generation', values: ['Gatsby', 'Webpack', 'Stateless component architecture'] },
   { name: 'RESTful API and database programming', values: ['NodeJS', 'SQL', 'MongoDB'] },
-  { name: 'Test- and behavior-driven development', values: ['Enzyme', 'Mocha', 'Karma'] }
+  { name: 'Test- and behavior-driven development', values: ['Agile development', 'Enzyme', 'Mocha', 'Karma'] }
 ]
 
 const About = () =>
