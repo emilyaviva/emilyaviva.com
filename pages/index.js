@@ -7,6 +7,7 @@ import Talks from '../components/Talks'
 import Contact from '../components/Contact'
 
 import 'font-awesome/scss/font-awesome.scss'
+import '../stylesheets/vendor/atom-one-dark.css'
 import '../stylesheets/manifest.sass'
 
 const mains = [<About />, <Portfolio />, <Talks />, <Contact />]

@@ -1,8 +1,20 @@
 .BlogPost
+  code
+    background-color: $code-inline-color
+    border: 1px solid darken($code-inline-color, 20%)
+    padding: 1px
+  pre
+    background-color: $code-background
+    color: $brand-white
+    border-left: 9px solid $brand-primary
+    padding: 6px 15px
+    code
+      background-color: inherit
+      border: none
+      padding: 0
   .disqus-wrapper
     margin: 0 auto
     max-width: 800px
-
   .post-header
     padding: 1rem 0
     .date

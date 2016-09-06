@@ -11,10 +11,7 @@ main
   max-width: $mobile
   margin: 12px auto 0
   padding: 0 12px
-  a
-    text-decoration: none
-    &:hover
-      text-decoration: underline
+  line-height: $line-height
   font-family: $body-family
   font-size: 16px
   color: $main-color
@@ -27,3 +24,12 @@ main
     font-family: $header-family
     color: $headline-color
     font-weight: 700
+  a
+    text-decoration: none
+    color: $link-color
+    /* thanks to https://eager.io/blog/smarter-link-underlines/ and https://blog.scottnonnenberg.com/this-blog-is-now-open-source/ */
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, $link-color 1px, $link-color 2px, rgba(0, 0, 0, 0) 2px)
+    &:hover
+      text-shadow: none
+      background: $link-hover-background
