@@ -2,10 +2,10 @@ import React from 'react'
 import ContactListItem from '../components/ContactListItem'
 
 const Contact = () =>
-  <main className='contact'>
+  <main className='Contact'>
     <a name='contact' />
     <h2>Contact</h2>
-    <ul className='contactListItems'>
+    <ul className='contact-list-items'>
       <ContactListItem
         icon='github'
         href='https://github.com/emilyaviva'
