@@ -7,4 +7,10 @@ const ContactListItem = ({ text, icon, href }) =>
     <a href={href}>{text}</a>
   </li>
 
-export default ContactListItem
+const propTypes = {
+  text: React.PropTypes.string,
+  icon: React.PropTypes.string,
+  href: React.PropTypes.string
+}
+
+export default Object.assign(ContactListItem, propTypes)
