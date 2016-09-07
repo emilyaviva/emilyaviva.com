@@ -2,6 +2,7 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 import format from 'date-fns/format'
+import Contact from '../components/Contact'
 import ReactDisqusThread from 'react-disqus-thread'
 
 class MarkdownWrapper extends React.Component {
@@ -13,6 +14,16 @@ class MarkdownWrapper extends React.Component {
   }
   render () {
     const post = this.props.route.page.data
+    if (this.props.route.page.file.name === '404') {
+      return (
+        <DocumentTitle title={config.siteTitle}>
+          <main className='Error404'>
+            <article dangerouslySetInnerHTML={{ __html: post.body }} />
+            <Contact />
+          </main>
+        </DocumentTitle>
+      )
+    }
     return (
       <DocumentTitle title={`${post.title} | ${config.siteTitle}`}>
         <main className='BlogPost'>

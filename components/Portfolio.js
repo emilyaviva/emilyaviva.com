@@ -11,7 +11,7 @@ const Portfolio = () =>
       href='https://codefellows.org'
       imgSrc={prefixLink('/img/codefellows.png')}
       imgAlt='Code Fellows logo - a red shield with text characters on it'
-      desc='Code Fellows website description goes here'
+      desc='The website for Code Fellows, a coding school in Seattle, is statically generated in React with Gatsby, pulling data from a remote content management system, and rendered in serverless JavaScript by Webpack and Aerobatic. This project involved migrating a Ruby on Rails web application to React, thereby reducing the codebase size from 7,000 to 1,400 lines, as well as coding new software to handle tasks like calendar filtering. It also involved close work with the marketing team to maintain the website specification, produce content management models that can be user-edited without delving into the codebase, and follow design prototypes in Bootstrap and Sass.'
     />
     <PortfolioItem
       name='The Extraterrestrial Birthday Calculator'

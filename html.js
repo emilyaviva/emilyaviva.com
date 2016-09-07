@@ -26,8 +26,8 @@ const Html = ({ body }) =>
     </body>
   </html>
 
-Html.propTypes = {
+const propTypes = {
   title: React.PropTypes.string
 }
 
-export default Html
+export default Object.assign(Html, propTypes)
