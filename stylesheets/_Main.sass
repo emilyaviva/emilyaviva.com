@@ -4,6 +4,11 @@
   &:nth-child(even)
     background-color: lighten($brand-primary, 10%)
 
+.other-main-wrapper
+  padding: 12px 0
+  background-color: $brand-white
+
+
 main
   background-color: transparent
   max-width: $mobile
@@ -22,8 +27,8 @@ main
     text-decoration: none
     color: $link-color
     /* thanks to https://eager.io/blog/smarter-link-underlines/ and https://blog.scottnonnenberg.com/this-blog-is-now-open-source/ */
-    text-shadow: .03em 0 $brand-white,-.03em 0 $brand-white,0 .03em $brand-white,0 -.03em $brand-white,.06em 0 $brand-white,-.06em 0 $brand-white,.09em 0 $brand-white,-.09em 0 $brand-white,.12em 0 $brand-white,-.12em 0 $brand-white,.15em 0 $brand-white,-.15em 0 $brand-white
-    background-image: linear-gradient(to top, $brand-white, $brand-white 1px, $link-color 1px, $link-color 2px, $brand-white 2px)
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff
+    background-image: linear-gradient(to top, #fff, #fff 1px, $link-color 1px, $link-color 2px, #fff 2px)
     &:hover
       text-shadow: none
       background: $link-hover-background

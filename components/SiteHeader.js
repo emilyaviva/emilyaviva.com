@@ -33,7 +33,7 @@ const SiteHeader = () =>
           const target = p.dest
             ? p.dest.substr(0, 1) !== '/'
               ? `/#${p.dest}`
-              : p.dest
+              : `${p.dest}/`
             : '/'
           const linkElem = target.substr(0, 1) === '#'
             ? <a href={target}>{linkText}</a>

@@ -17,33 +17,37 @@ class MarkdownWrapper extends React.Component {
     if (this.props.route.page.file.name === '404') {
       return (
         <DocumentTitle title={config.siteTitle}>
-          <main className='Error404'>
-            <article dangerouslySetInnerHTML={{ __html: post.body }} />
-            <Contact />
-          </main>
+          <div className='other-main-wrapper'>
+            <main className='Error404'>
+              <article dangerouslySetInnerHTML={{ __html: post.body }} />
+              <Contact />
+            </main>
+          </div>
         </DocumentTitle>
       )
     }
     return (
       <DocumentTitle title={`${post.title} | ${config.siteTitle}`}>
-        <main className='BlogPost'>
-          <section className='post-header'>
-            <span className='date'>
-              {format((post.date || new Date()), 'D MMMM YYYY')}
-            </span>
-            <h1 className='title'>{post.title}</h1>
-          </section>
-          <article dangerouslySetInnerHTML={{ __html: post.body }} />
-          <div className='disqus-wrapper'>
-            <ReactDisqusThread
-              shortname='eakm-blog'
-              identifier={post.title}
-              title={post.title}
-              url={`http://emilyaviva.com/blog/${this.props.route.page.path}`}
-              onNewComment={this.handleNewComment}
-            />
-          </div>
-        </main>
+        <div className='other-main-wrapper'>
+          <main className='BlogPost'>
+            <section className='post-header'>
+              <span className='date'>
+                {format((post.date || new Date()), 'D MMMM YYYY')}
+              </span>
+              <h1 className='title'>{post.title}</h1>
+            </section>
+            <article dangerouslySetInnerHTML={{ __html: post.body }} />
+            <div className='disqus-wrapper'>
+              <ReactDisqusThread
+                shortname='eakm-blog'
+                identifier={post.title}
+                title={post.title}
+                url={`http://emilyaviva.com/blog/${this.props.route.page.path}`}
+                onNewComment={this.handleNewComment}
+              />
+            </div>
+          </main>
+        </div>
       </DocumentTitle>
     )
   }
