@@ -5,9 +5,9 @@
     background-color: lighten($brand-primary, 10%)
 
 main
-  background: transparent
-  &:only-of-type
-    background-color: $brand-white
+  background-color: transparent
+  // &:only-of-type
+  //   background-color: $brand-white
   max-width: $mobile
   margin: 12px auto 0
   padding: 0 12px
@@ -20,10 +20,6 @@ main
     font-weight: 400
   strong
     font-weight: 700
-  h1, h2, h3, h4, h5, h6
-    font-family: $header-family
-    color: $headline-color
-    font-weight: 700
   a
     text-decoration: none
     color: $link-color
@@ -33,3 +29,13 @@ main
     &:hover
       text-shadow: none
       background: $link-hover-background
+  h1, h2, h3, h4, h5, h6
+    font-family: $header-family
+    color: $headline-color
+    font-weight: 700
+    a
+      color: inherit
+      text-shadow: none
+      background-image: none
+      &:hover
+        text-decoration: none
