@@ -18,5 +18,11 @@
     max-width: 800px
   .post-header
     padding: 1rem 0
+    display: flex
+    @media screen and (max-width: $desktop)
+      flex-direction: row
+      justify-content: space-between
+    @media screen and (max-width: $mobile)
+      flex-direction: column
     .date
-      float: right
+      display: block

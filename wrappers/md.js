@@ -31,10 +31,10 @@ class MarkdownWrapper extends React.Component {
         <div className='other-main-wrapper'>
           <main className='BlogPost'>
             <section className='post-header'>
-              <span className='date'>
-                {format((post.date || new Date()), 'D MMMM YYYY')}
-              </span>
               <h1 className='title'>{post.title}</h1>
+              <div className='date'>
+                {format((post.date || new Date()), 'D MMMM YYYY')}
+              </div>
             </section>
             <article dangerouslySetInnerHTML={{ __html: post.body }} />
             <div className='disqus-wrapper'>
