@@ -12,8 +12,8 @@ const Template = ({ children }) =>
     <Footer />
   </div>
 
-Template.propTypes = {
+const propTypes = {
   children: React.PropTypes.any
 }
 
-export default Template
+export default Object.assign(Template, propTypes)
