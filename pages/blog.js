@@ -29,12 +29,12 @@ class BlogIndex extends React.Component {
     })
     return (
       <DocumentTitle title={config.blogTitle}>
-        <dev className='blog-main-wrapper'>
+        <div className='blog-main-wrapper'>
           <main className='blog-index'>
             <h2>All Blog Posts</h2>
             <ul>{pageLinks}</ul>
           </main>
-        </dev>
+        </div>
       </DocumentTitle>
     )
   }
