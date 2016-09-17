@@ -8,6 +8,8 @@
   flex-direction: row
   justify-content: space-between
   align-items: center
+  @media (max-width: $mobile)
+    display: block
   .site-name
     height: 40px
     margin-left: 12px
@@ -30,6 +32,15 @@
           margin-left: 0
         &:hover
           opacity: 1
+    @media (max-width: $mobile)
+      padding-top: 12px
+      width: auto
+      ul
+        justify-content: space-between
+        margin-left: 12px
+        li
+          margin-left: 0
+
   a
     text-decoration: none
     color: $header-color
