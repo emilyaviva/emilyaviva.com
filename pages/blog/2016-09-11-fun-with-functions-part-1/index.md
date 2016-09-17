@@ -4,7 +4,7 @@ date: 2016-09-11T00:00PT
 title: |
        Fun with functions, part 1: Function declarations and expressions
 ---
-In my previous post, I briefly touched on one of the most useful features of the latest versions of JavaScript: functions written in the new [arrow syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). They're worth exploring in a little more depth, because they differ just enough from "standard" functions to warrant some explanation.
+In my [previous post](https://www.emilyaviva.com/blog/immutable-stateless-react-components/), I briefly touched on one of the most useful features of the latest versions of JavaScript: functions written in the new [arrow syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). They're worth exploring in a little more depth, because they differ just enough from "standard" functions to warrant some explanation.
 
 What is an arrow function? Before we get into that, let's do a quick review of what functions actually are in JavaScript. In the first post of this two-part series, we'll talk about the nature of functions, and in the [second post](https://emilyaviva.com/blog/fun-with-functions-part-2/), we'll talk about arrow functions specifically, and see how they can be leveraged in React to help write concise components.
 
@@ -21,7 +21,7 @@ On to functions. A function declaration is a *statement*. We use the word `funct
 ```javascript
 // function declaration
 function exampleOne (name) {
-  console.log('Hello ' + name + '!')
+  console.log(`Hello, ${name}!`)
 }
 ```
 
@@ -75,4 +75,4 @@ function Spaceship (name, registry, maxSpeed) {
 
 When the `Spaceship` function is called, e.g. with `new`, to create a new spaceship object, this prototype function will run with the arguments passed to it. In this type of function, then, `this` refers to the new object under construction.
 
-Since React components are actually functions, In React, `this` (usually) means the current component. For example, `this.props` refers to the props passed to that specific instance of the component, and `this.state` refers to the component's state. We'll talk more about `this` in React in [part two](https://emilyaviva.com/blog/fun-with-functions-part-2/).
+Since React components are actually functions, In React, `this` (usually) means the current component. For example, `this.props` refers to the props passed to that specific instance of the component, and `this.state` refers to the component's state. We'll talk more about `this` in React in [part two](https://www.emilyaviva.com/blog/fun-with-functions-part-2/).

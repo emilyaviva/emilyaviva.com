@@ -4,7 +4,7 @@ date: 2016-09-12T00:00PT
 title: |
        Fun with functions, part 2: Arrow functions
 ---
-In my [last post](https://emilyaviva.com/blog/fun-with-functions-part-1/), I talked about function expressions and how `this` is used in regular JavaScript functions. In this post, I want to talk about arrow function syntax, easily one of my favorite enhancements to JavaScript, and how they can be used within React to help write efficient code.
+In my [last post](https://www.emilyaviva.com/blog/fun-with-functions-part-1/), I talked about function expressions and how `this` is used in regular JavaScript functions. In this post, I want to talk about arrow function syntax, easily one of my favorite enhancements to JavaScript, and how they can be used within React to help write efficient code.
 
 A preliminary note: Arrow functions are part of the ES2015 version of the JavaScript language ([somewhat incorrectly](https://medium.com/@jayphelps/please-stop-referring-to-proposed-javascript-features-as-es7-cad29f9dcc4b) known as "ES6"), but you can still use them natively in [many, but not all, modern browsers](http://caniuse.com/#search=arrow%20functions). However, to maximize portability, it's still necessary to use a transpiler like [Babel](https://babeljs.io) (which, if you're writing JSX for React, you're most likely using anyway).
 
