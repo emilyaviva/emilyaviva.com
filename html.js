@@ -1,8 +1,6 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
-import { TypographyStyle, GoogleFont } from 'react-typography'
-import typography from './utils/typography'
 
 const BUILD_TIME = new Date().getTime()
 const css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
@@ -16,8 +14,7 @@ const Html = ({ body }) =>
       <title>{DocumentTitle.rewind()}</title>
       <link rel='icon' type='image/x-icon' href={prefixLink('/favicon/favicon.ico')} />
       <link rel='apple-touch-icon-precomposed' href={prefixLink('blue-fontain-pen-152-212880.png')} />
-      <TypographyStyle typography={typography} />
-      <GoogleFont typography={typography} />
+      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,400i|Source+Sans+Pro:400,400i,600,600i' />
       {css}
     </head>
     <body>

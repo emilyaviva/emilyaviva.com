@@ -7,6 +7,7 @@ import Portfolio from '../components/Portfolio'
 import Talks from '../components/Talks'
 import Contact from '../components/Contact'
 
+import 'normalize.css/normalize.css'
 import 'font-awesome/scss/font-awesome.scss'
 import '../stylesheets/vendor/atom-one-dark.css'
 import '../stylesheets/manifest.sass'
