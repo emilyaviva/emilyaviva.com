@@ -2,7 +2,7 @@
   "private": true,
   "name": "emilyaviva.com",
   "description": "My professional website - Emily Aviva Kapor-Mater",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": {
     "name": "Emily Aviva Kapor-Mater",
     "email": "emily@emilyaviva.com",
@@ -24,12 +24,13 @@
   ],
   "license": "ISC",
   "scripts": {
-    "clean": "rm -rf public/*",
-    "lint": "standard --verbose | snazzy",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gatsby develop",
     "build": "gatsby build",
-    "serve-build": "NODE_ENV=production gatsby build && gatsby serve-build"
+    "clean": "rm -rf public/*",
+    "deploy": "gatsby build --prefix-links && gh-pages -d public",
+    "dev": "gatsby develop",
+    "lint": "standard --verbose | snazzy",
+    "serve-build": "NODE_ENV=production gatsby build && gatsby serve-build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "standard": {
     "parser": "babel-eslint"
@@ -84,6 +85,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-1": "^6.13.0",
     "fs-extra": "^0.30.0",
+    "gh-pages": "^0.11.0",
     "snazzy": "^5.0.0",
     "standard": "^8.1.0"
   }
