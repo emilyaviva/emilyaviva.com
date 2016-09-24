@@ -14,7 +14,7 @@ const Html = ({ body }) =>
       <title>{DocumentTitle.rewind()}</title>
       <link rel='icon' type='image/x-icon' href={prefixLink('/favicon/favicon.ico')} />
       <link rel='apple-touch-icon-precomposed' href={prefixLink('blue-fontain-pen-152-212880.png')} />
-      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,400i|Source+Sans+Pro:400,400i,600,600i' />
+      <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:400,400i|Source+Sans+Pro:400,400i,600,600i|Fira+Mono' />
       {css}
     </head>
     <body>
