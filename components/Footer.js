@@ -3,7 +3,7 @@ import React from 'react'
 const footerItems = [
   { href: 'github.com/gatsbyjs', icon: 'pencil', text: 'Built with Gatsby' },
   { href: 'github.com/emilyaviva/emilyaviva.com', icon: 'code-fork', text: 'This website is open-source' },
-  { href: 'github.com/aerobatic.com', icon: 'cogs', text: 'Static hosted on Aerobatic' }
+  { href: 'www.aerobatic.com', icon: 'cogs', text: 'Static hosted by Aerobatic' }
 ]
 
 const Footer = () =>
