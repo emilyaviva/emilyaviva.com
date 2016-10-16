@@ -1,7 +1,9 @@
 # emilyaviva.com
-My professional website. This is version 0.5, with repository name change and a bunch of other static hosting goodies to come shortly, so it's not up on the web yet. But when it is, it'll be at [emilyaviva.com](http://emilyaviva.com).
+My professional website, live at [emilyaviva.com](http://emilyaviva.com).
 
-Using [Gatsby](https://github.com/gatsbyjs/gatsby) and [Typography.js](https://kyleamathews.github.io/typography.js/)
+Using [Gatsby](https://github.com/gatsbyjs/gatsby).
+
+The code of this website is free and open-source. Feel free to clone, expand on anything useful you find in here, etc.
 
 ## Running in development
 ```
