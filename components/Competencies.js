@@ -4,7 +4,7 @@ const competencies = [
   { name: 'Front-end MV* development', values: ['React/Redux', 'Angular', 'jQuery', 'Prototyping'] },
   { name: 'Data visualization', values: ['D3', 'Victory', 'Open Data'] },
   { name: 'Site generation', values: ['Gatsby', 'Webpack', 'Stateless component architecture'] },
-  { name: 'RESTful API and database programming', values: ['NodeJS', 'SQL', 'MongoDB'] },
+  { name: 'RESTful API and database programming', values: ['NodeJS', 'Ruby on Rails', 'SQL', 'MongoDB'] },
   { name: 'Test- and behavior-driven development', values: ['Agile development', 'Enzyme', 'Mocha', 'Karma'] }
 ]
 
