@@ -30,8 +30,8 @@ const Contact = () =>
       />
       <ContactListItem
         icon='lock'
-        href='http://pgp.mit.edu/pks/lookup?op=get&search=0xC79A341B47E21F8A'
-        text='Public GnuPG/PGP key'
+        href='/pgp'
+        text='Public PGP key'
       />
     </ul>
     <ul className='contactListItems'>

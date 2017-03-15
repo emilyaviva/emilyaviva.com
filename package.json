@@ -2,7 +2,7 @@
   "private": true,
   "name": "emilyaviva.com",
   "description": "My professional website - Emily Aviva Kapor-Mater",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "author": {
     "name": "Emily Aviva Kapor-Mater",
     "email": "emily@emilyaviva.com",
@@ -34,27 +34,6 @@
   },
   "standard": {
     "parser": "babel-eslint"
-  },
-  "_aerobatic": {
-    "router": [
-      {
-        "module": "webpage"
-      },
-      {
-        "module": "redirect",
-        "options": {
-          "/about": "/",
-          "/portfolio": "/#portfolio",
-          "/talks": "/#talks",
-          "/contact": "/#contact"
-        }
-      }
-    ],
-    "build": {
-      "engine": "npm",
-      "script": "build",
-      "output": "public"
-    }
   },
   "dependencies": {
     "anchorate": "^1.1.0",
