@@ -1,13 +1,16 @@
-# gatsby-starter-default
-The default Gatsby starter
+# emilyaviva.com
+My professional website, live at [emilyaviva.com](http://emilyaviva.com).
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Using [Gatsby](https://github.com/gatsbyjs/gatsby). Finally updated to Gatsby v1! 🙌🏻
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+The code of this website is free and open-source. Feel free to clone, expand on anything useful you find in here, etc. Version numbers track Gatsby version numbers.
+
+## Running in development
 ```
-gatsby new gatsby-example-site
+npm install
+npm run dev
 ```
 
-## Deploy
+Navigate your web browser to [localhost:8000](http://localhost:8000).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
