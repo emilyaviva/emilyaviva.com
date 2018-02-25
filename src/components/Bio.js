@@ -1,8 +1,8 @@
 import React from 'react'
 
 // Import typefaces
-import 'typeface-montserrat'
-import 'typeface-merriweather'
+import 'typeface-lato'
+import 'typeface-source-sans-pro'
 
 import EmilyKaporMaterPhoto from './EmilyKaporMaterPhoto.jpg'
 import { rhythm } from '../utils/typography'

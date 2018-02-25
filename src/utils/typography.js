@@ -1,15 +1,21 @@
 import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
+import CodePlugin from 'typography-plugin-code'
 
-Wordpress2016.overrideThemeStyles = () => ({
-  'a.gatsby-resp-image-link': {
-    boxShadow: 'none',
-  },
+const typography = new Typography({
+  plugins: [
+    new CodePlugin()
+  ],
+  baseFontSize: '16px',
+  baseLineHeight: 1.50,
+  scaleRatio: 2.00,
+  paragraphSpacing: 1.00,
+  headerFontFamily: ['Lato', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+  bodyFontFamily: ['Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+  headerGray: 20,
+  headerGrayHue: 0,
+  bodyGray: 20,
+  headerWeight: 700
 })
-
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {

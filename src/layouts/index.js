@@ -31,7 +31,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            Emily Aviva Kapor-Mater
           </Link>
         </h1>
       )
@@ -39,7 +39,7 @@ class Template extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: 'Montserrat, sans-serif',
+            fontFamily: 'lato, sans-serif',
             marginTop: 0,
             marginBottom: rhythm(-1),
           }}
@@ -52,7 +52,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            Emily Aviva Kapor-Mater
           </Link>
         </h3>
       )

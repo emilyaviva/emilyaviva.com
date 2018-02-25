@@ -35,8 +35,9 @@
     "gatsby-transformer-sharp": "^1.6.19",
     "lodash": "^4.17.5",
     "react-responsive-grid": "^0.3.4",
-    "typeface-merriweather": "0.0.43",
-    "typeface-montserrat": "0.0.43",
+    "typeface-lato": "0.0.54",
+    "typeface-source-sans-pro": "0.0.54",
+    "typography-plugin-code": "^0.16.11",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "devDependencies": {
