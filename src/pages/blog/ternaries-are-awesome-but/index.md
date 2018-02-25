@@ -2,6 +2,7 @@
 date: 2016-12-16
 title: Ternaries are awesome, but…
 ---
+
 Those who know me know that I am [a big fan](https://docs.google.com/presentation/d/15dZNCA-F8L-yk1vIcpNLpe-LvHoPmp_GRxo49VLzC30/edit#slide=id.p) of the JavaScript ternary operator, because, simply put, it allows us to treat "if-else" control flow as an _expression_ rather than a _statement_. This means that we can use "if-else" logic anywhere we can use a syntactic expression by using the ternary operator, which can save an awful lot of code.
 
 One of the most useful applications of this property of the ternary operator is in writing [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) for React. In JSX, expressions are wrapped in curly braces, and their evaluation is inserted into the markup. This means that we can write conditional expressions to create context-dependent markup, for example:
@@ -14,10 +15,11 @@ We can even do more complicated examples, such as:
 
 ```javascript
 <ul>
-  {tags.length
-    ? tags.map((tag, i) => <li key={i}>{tag}</li>)
-    : <li>Untagged</li>
-  }
+  {tags.length ? (
+    tags.map((tag, i) => <li key={i}>{tag}</li>)
+  ) : (
+    <li>Untagged</li>
+  )}
 </ul>
 ```
 

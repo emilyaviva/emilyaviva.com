@@ -3,6 +3,7 @@ date: 2016-09-12
 title: |
        Fun with functions, part 2: Arrow functions
 ---
+
 In my [last post](http://emilyaviva.com/blog/fun-with-functions-part-1/), I talked about function expressions and how `this` is used in regular JavaScript functions. In this post, I want to talk about arrow function syntax, easily one of my favorite enhancements to JavaScript, and how they can be used within React to help write efficient code.
 
 A preliminary note: Arrow functions are part of the ES2015 version of the JavaScript language ([somewhat incorrectly](https://medium.com/@jayphelps/please-stop-referring-to-proposed-javascript-features-as-es7-cad29f9dcc4b) known as "ES6"), but you can still use them natively in [many, but not all, modern browsers](http://caniuse.com/#search=arrow%20functions). However, to maximize portability, it's still necessary to use a transpiler like [Babel](https://babeljs.io) (which, if you're writing JSX for React, you're most likely using anyway).
@@ -20,7 +21,7 @@ const myFunction = () => {
 }
 ```
 
-If the arrow function has exactly one expression after the arrow, it will implicitly *return* the value that the right-hand side of the function produces. This way, you don't need to write an explicit `return` statement.
+If the arrow function has exactly one expression after the arrow, it will implicitly _return_ the value that the right-hand side of the function produces. This way, you don't need to write an explicit `return` statement.
 
 ```javascript
 const addTwo = (x, y) => x + y
@@ -56,8 +57,12 @@ import _ from 'lodash'
 
 const books = [
   { title: 'Harry Potter', authorLast: 'Rowling', authorFirst: 'J. K.' },
-  { title: 'The Lord of the Rings', authorLast: 'Tolkein', authorFirst: 'J. R. R.' },
-  { title: 'A Wrinkle in Time', authorLast: 'L\'Engle', authorFirst: 'Madeline' }
+  {
+    title: 'The Lord of the Rings',
+    authorLast: 'Tolkein',
+    authorFirst: 'J. R. R.'
+  },
+  { title: 'A Wrinkle in Time', authorLast: "L'Engle", authorFirst: 'Madeline' }
 ]
 const sortedBooks = _.sortBy(books, b => b.authorLast)
 const booksDetails = sortedBooks.map((book, i) => (
@@ -67,14 +72,9 @@ const booksDetails = sortedBooks.map((book, i) => (
   </ul>
 ))
 
-const BooksComponent = () =>
-  <div>
-    {booksDetails.map((entry, i) =>
-      <div key={i}>
-        {entry}
-      </div>
-    )}
-  </div>
+const BooksComponent = () => (
+  <div>{booksDetails.map((entry, i) => <div key={i}>{entry}</div>)}</div>
+)
 
 export default BooksComponent
 ```
@@ -94,17 +94,17 @@ class ImageWithHover extends React.Component {
     hoverSrc: React.PropTypes.string,
     alt: React.PropTypes.string
   }
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = { hover: false }
   }
-  mouseOver () {
+  mouseOver() {
     this.setState({ hover: true })
   }
-  mouseOut () {
+  mouseOut() {
     this.setState({ hover: false })
   }
-  render () {
+  render() {
     const { src, hoverSrc, alt } = this.props
     return (
       <img
@@ -122,8 +122,8 @@ We have to `bind(this)` in the `onMouseOver` and `onMouseOut` callbacks, because
 
 ### Caveats
 
-Arrow functions are always *anonymous*. That is, they don't have any intrinsic "name". (It's a little more complicated than this, but this is sufficient for a high-level overview). Arrow functions don't hoist to the top of the scope, as function statements do.
+Arrow functions are always _anonymous_. That is, they don't have any intrinsic "name". (It's a little more complicated than this, but this is sufficient for a high-level overview). Arrow functions don't hoist to the top of the scope, as function statements do.
 
-It's important to note that arrow functions are only *function expressions*. As we discussed in the previous post, a function expression can be used to represent the function, but it cannot be used to declare the function in a way that has any persistence unless it's assigned to a variable.
+It's important to note that arrow functions are only _function expressions_. As we discussed in the previous post, a function expression can be used to represent the function, but it cannot be used to declare the function in a way that has any persistence unless it's assigned to a variable.
 
 For these reasons, it's a common pattern to see arrow functions either be used on their own (as bare expressions) or immediately assigned to a variable with `const`. If you need recursion, you're probably better off with a named function.

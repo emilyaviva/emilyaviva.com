@@ -2,6 +2,7 @@
 date: 2016-09-05
 title: Immutable, stateless React components
 ---
+
 There are several different ways to declare stateless components in React: using `React.createClass()`, ES2015 classes, and my favorite, pure functions. In functional programming-speak, a "pure" function is one that does nothing other than return a value: it does not emit any side effects. In other words, a pure function won't assign values to variables, alter an object's value, or even perform tasks like `console.log()`.
 
 Since all a pure function does is return a value, we can take advantage of the implicit return of [arrow syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). What this basically means is that in ES2015 we can write a function simply like `(x, y) => x + y`, which is shorthand for `function (x, y) { return x + y }`. Writing a stateless React component in this way looks something like this:
@@ -9,11 +10,12 @@ Since all a pure function does is return a value, we can take advantage of the i
 ```javascript
 import React from 'react'
 
-const MyComponent = () =>
+const MyComponent = () => (
   <div>
     <h2>My Component!</h2>
     <p>Stuff goes here.</p>
   </div>
+)
 
 export default MyComponent
 ```
@@ -23,11 +25,12 @@ The convention (inasmuch as there are well-established conventions in the consta
 We can use [object destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to access the props passed to the component:
 
 ```javascript
-const MyComponent = ({ name, id }) =>
+const MyComponent = ({ name, id }) => (
   <div>
     <h2>Hello, {name.first}</h2>
     <p>Account number: {id}</p>
   </div>
+)
 ```
 
 ### Immutability and propTypes validation
@@ -42,7 +45,7 @@ In a stateless component declared as an ES2015 class (as opposed to using `React
 
 ```javascript
 class MyComponent extends React.Component {
-  render () {
+  render() {
     // etc.
   }
 }
@@ -61,7 +64,7 @@ class MyComponent extends React.Component {
     name: React.PropTypes.object,
     id: React.PropTypes.string
   }
-  render () {
+  render() {
     // etc.
   }
 }
@@ -73,12 +76,12 @@ Circling back to my original point about declaring stateless components as pure 
 const MyComponent = ({ name, id }) =>
   // etc.
 
-MyComponent.propTypes = {
-  // etc.
-}
+  (MyComponent.propTypes = {
+    // etc.
+  })
 ```
 
-If we want to declare a functional, stateless component, *and* have that component be declared in an immutable style, doing so by means of declaring the component as a pure function requires us to use some method to return a copy of the component function with the props validation set on it. One way of doing so would be something like this:
+If we want to declare a functional, stateless component, _and_ have that component be declared in an immutable style, doing so by means of declaring the component as a pure function requires us to use some method to return a copy of the component function with the props validation set on it. One way of doing so would be something like this:
 
 ```javascript
 const MyComponent = ({ name, id }) =>

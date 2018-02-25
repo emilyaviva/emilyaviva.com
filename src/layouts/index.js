@@ -22,7 +22,7 @@ class Template extends React.Component {
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: 'inherit',
+              color: 'inherit'
             }}
             to={'/'}
           >
@@ -30,7 +30,7 @@ class Template extends React.Component {
               style={{
                 ...scale(1.5),
                 marginBottom: 0,
-                marginTop: 0,
+                marginTop: 0
               }}
             >
               Emily Aviva Kapor-Mater
@@ -55,14 +55,14 @@ class Template extends React.Component {
             style={{
               fontFamily: 'lato, sans-serif',
               marginTop: 0,
-              marginBottom: rhythm(1),
+              marginBottom: rhythm(1)
             }}
           >
             <Link
               style={{
                 boxShadow: 'none',
                 textDecoration: 'none',
-                color: 'inherit',
+                color: 'inherit'
               }}
               to={'/'}
             >
@@ -76,7 +76,7 @@ class Template extends React.Component {
       <Container
         style={{
           maxWidth: rhythm(32),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
         }}
       >
         {header}
