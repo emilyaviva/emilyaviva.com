@@ -15,14 +15,9 @@ class Template extends React.Component {
     }
 
     if (location.pathname === rootPath) {
+      // Header for home page
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
+        <header>
           <Link
             style={{
               boxShadow: 'none',
@@ -31,36 +26,56 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Emily Aviva Kapor-Mater
+            <h1
+              style={{
+                ...scale(1.5),
+                marginBottom: 0,
+                marginTop: 0,
+              }}
+            >
+              Emily Aviva Kapor-Mater
+            </h1>
+            <h3
+              style={{
+                ...scale(0.75),
+                marginBottom: rhythm(1.25),
+                marginTop: 0
+              }}
+            >
+              Software Developer, Rabbi, Etc.
+            </h3>
           </Link>
-        </h1>
+        </header>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: 'lato, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
+        // Header for pages, e.g. blog
+        <header>
+          <h3
             style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
+              fontFamily: 'lato, sans-serif',
+              marginTop: 0,
+              marginBottom: rhythm(1),
             }}
-            to={'/'}
           >
-            Emily Aviva Kapor-Mater
-          </Link>
-        </h3>
+            <Link
+              style={{
+                boxShadow: 'none',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
+              to={'/'}
+            >
+              Emily Aviva Kapor-Mater
+            </Link>
+          </h3>
+        </header>
       )
     }
     return (
       <Container
         style={{
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(32),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
