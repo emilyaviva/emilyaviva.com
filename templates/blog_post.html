@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block content %}
+<main>
+  <div class="blog-post">
+    <div class="headmatter">
+      <h2>{{ page.title }}</h2>
+      <div class="date">
+        {{ page.date | date(format="%d %B %Y") }}
+      </div>
+    </div>
+
+    <article>
+      {{ page.content | safe }}
+    </article>
+  </div>
+</main>
+{% endblock content %}

@@ -1,0 +1,151 @@
+// Variables and Mixins
+$break-small: 500px;
+$hpadding: 60px;
+$hpadding-small: $hpadding / 3.5;
+
+$body-typeface-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$header-typeface-family: 'Oswald', $body-typeface-family;
+$code-typeface-family: 'Fira Mono', 'Monaco', monospace;
+
+$base-line-height: 1.5em;
+$base-font-size: 16px;
+
+$brand-primary: #a6bdda;
+$brand-white: #fbfbfb;
+$link-color: darken($brand-primary, 30%);
+$link-hover-background: lighten($brand-primary, 20%);
+$header-color: #181818;
+$code-inline-background: #fdf6e3;
+$code-inline-color: #657b83;
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: linear-gradient($direction, $color-stops);
+}
+
+body {
+  a {
+    text-decoration: none;
+    color: $link-color;
+    /* thanks to https://eager.io/blog/smarter-link-underlines/ and https://blog.scottnonnenberg.com/this-blog-is-now-open-source/ */
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+    background-image: linear-gradient(to top, #fff, #fff 1px, $link-color 1px, $link-color 2px, #fff 2px);
+    &:hover {
+      text-shadow: none;
+      background: $link-hover-background;
+    }
+  }
+}
+
+main {
+  max-width: 900px;
+  // width: 100%;
+  margin: 0 auto;
+  padding: 0 $hpadding;
+
+  @media (max-width: $break-small) {
+    padding: 0 $hpadding-small;
+  }
+}
+
+header {
+  font-family: $header-typeface-family;
+  font-weight: 400;
+  height: inherit;
+  background-image: linear-gradient($brand-primary, $brand-white);
+  padding: 12px 0 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: $break-small) {
+    display: block;
+  }
+  .site-title {
+    margin-left: 12px;
+    @media (max-width: $break-small) {
+      margin-left: 12px;
+    }
+  }
+  nav {
+    margin-right: 12px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      li {
+        list-style-type: none;
+        margin-left: 16px;
+        opacity: 0.5;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    @media (max-width: $break-small) {
+      margin: 6px 12px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $header-color;
+    text-shadow: none;
+  }
+  h1 {
+    font-size: $base-font-size * 1.5;
+  }
+  h2 {
+    font-size: $base-font-size * 1.25;
+  }
+}
+
+main {
+  padding-top: 16px;
+  background-color: $brand-white;
+  font-family: $body-typeface-family;
+  line-height: $base-line-height;
+  p, ul, ol {
+    text-align: justify;
+  }
+  .headmatter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $break-small) {
+      flex-direction: column;
+    }
+    h2 {
+      font-size: $base-font-size * 2;
+      font-family: $header-typeface-family;
+      margin-bottom: 6px;
+    }
+    .date {
+      display: block;
+    }
+  }
+  article {
+    margin-top: $base-line-height;
+    p {
+      margin-bottom: $base-line-height / 2;
+    }
+  }
+}
+
+// code
+pre, code {
+  font-family: $code-typeface-family;
+}
+pre {
+  padding: 6px;
+  margin: ($base-line-height * 0.5) 0;
+  width: inherit;
+}
+code {
+  color: $code-inline-color;
+  background-color: $code-inline-background;
+  border: 1px solid darken($code-inline-background, 20%);
+  padding: 1px;
+}

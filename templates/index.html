@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    <link rel="stylesheet" href="{{ get_url(path="reset.css", trailing_slash=false) }}">
+    <link rel="stylesheet" href="{{ get_url(path="local.css", trailing_slash=false) }}">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,400i|Source+Sans+Pro:400,400i,600,600i|Fira+Mono">
+
+    {% if config.generate_rss %}
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+    {% endif %}
+  </head>
+
+  <body>
+    <header>
+      <div class="site-title">
+        <a href="{{ get_url(path="/") }}"><h1>Emily Aviva Kapor-Mater</h1></a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <div class="site-nav-link">
+              <a href="{{ get_url(path="/blog") }}"><h2>Blog</h2></a>
+            </div>
+          </li>
+          <li>
+            <div class="site-nav-link">
+              <a href="{{ get_url(path="/contact") }}"><h2>Contact</h2></a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block content %}
+    <main>
+      <section class="posts">
+        {% for page in section.pages %}
+          <a href="{{ page.permalink }}">
+            <span class="post-title">
+              {{ page.title }}
+            </span>
+            &nbsp;|&nbsp;
+            <span class="post-date">
+              {{ page.date | date(format="%d %B %Y") }}
+            </span>
+          </a>
+        {% endfor %}
+      </section>
+    </main>
+    {% endblock content %}
+
+  </body>
+</html>
