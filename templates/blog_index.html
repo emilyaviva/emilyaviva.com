@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block content %}
+<main>
+  <section class="posts">
+    <ul class="posts-list">
+      {% for page in section.pages %}
+        <li class="post-list-item">
+          <a href="{{ page.permalink }}">
+            <span class="post-title">
+              {{ page.title }}
+            </span>
+            &nbsp;|&nbsp;
+            <span class="post-date">
+              {{ page.date | date(format="%d %B %Y") }}
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>
+{% endblock content %}

@@ -23,7 +23,17 @@ $code-inline-color: #657b83;
   background: linear-gradient($direction, $color-stops);
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 body {
+  background-color: $brand-white;
   a {
     text-decoration: none;
     color: $link-color;
@@ -37,9 +47,28 @@ body {
   }
 }
 
+ul.contact-list {
+  list-style-type: none;
+  .last-in-section {
+    height: 1.5 * $base-line-height;
+  }
+  svg {
+    padding-right: 8px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-typeface-family;
+}
+h1 {
+  font-size: $base-font-size * 1.5;
+}
+h2 {
+  font-size: $base-font-size * 1.25;
+}
+
 main {
   max-width: 900px;
-  // width: 100%;
   margin: 0 auto;
   padding: 0 $hpadding;
 
@@ -93,12 +122,6 @@ header {
     color: $header-color;
     text-shadow: none;
   }
-  h1 {
-    font-size: $base-font-size * 1.5;
-  }
-  h2 {
-    font-size: $base-font-size * 1.25;
-  }
 }
 
 main {
@@ -109,6 +132,14 @@ main {
   p, ul, ol {
     text-align: justify;
   }
+  img.portrait {
+    border-radius: 4%;
+    opacity: .94;
+    width: inherit;
+    float: right;
+    width: 230px;
+    margin-left: 18px;
+  }
   .headmatter {
     display: flex;
     flex-direction: row;
@@ -118,18 +149,21 @@ main {
       flex-direction: column;
     }
     h2 {
+      line-height: $base-line-height * 0.75;
       font-size: $base-font-size * 2;
-      font-family: $header-typeface-family;
-      margin-bottom: 6px;
+      padding-bottom: $base-line-height * 0.5;
     }
     .date {
       display: block;
     }
   }
   article {
-    margin-top: $base-line-height;
     p {
       margin-bottom: $base-line-height / 2;
+    }
+    h3 {
+      font-size: $base-font-size * 1.5;
+      line-height: $base-line-height * 1.25;
     }
   }
 }
@@ -148,4 +182,9 @@ code {
   background-color: $code-inline-background;
   border: 1px solid darken($code-inline-background, 20%);
   padding: 1px;
+  a {
+    text-shadow: none;
+    color: $link-color;
+    background: $link-hover-background;
+  }
 }

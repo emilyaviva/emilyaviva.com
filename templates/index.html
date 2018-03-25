@@ -9,10 +9,12 @@
 
     <link rel="stylesheet" href="{{ get_url(path="reset.css", trailing_slash=false) }}">
     <link rel="stylesheet" href="{{ get_url(path="local.css", trailing_slash=false) }}">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,400i|Source+Sans+Pro:400,400i,600,600i|Fira+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,400i|Source+Sans+Pro:400,400i,600,600i|Fira+Mono">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
     {% if config.generate_rss %}
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
     {% endif %}
   </head>
 
@@ -28,34 +30,47 @@
               <a href="{{ get_url(path="/blog") }}"><h2>Blog</h2></a>
             </div>
           </li>
-          <li>
-            <div class="site-nav-link">
-              <a href="{{ get_url(path="/contact") }}"><h2>Contact</h2></a>
-            </div>
-          </li>
         </ul>
       </nav>
     </header>
 
     {% block content %}
     <main>
-      <section class="posts">
-        <ul class="posts-list">
-          {% for page in section.pages %}
-            <li class="post-list-item">
-              <a href="{{ page.permalink }}">
-                <span class="post-title">
-                  {{ page.title }}
-                </span>
-                &nbsp;|&nbsp;
-                <span class="post-date">
-                  {{ page.date | date(format="%d %B %Y") }}
-                </span>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </section>
+      <article>
+        <img class="portrait" src="EmilyKaporMaterPhoto.jpg" alt="Photo of Emily Aviva Kapor-Mater" />
+        <p>Full-stack software developer</p>
+        <p>Rabbi, teacher of Judaism, and </p>
+      </article>
+      <div class="headmatter">
+        <h2>Contact</h2>
+      </div>
+      <ul class="contact-list">
+        <li>
+          <i class="fab fa-github"></i><a href="https://github.com/emilyaviva">GitHub</a>
+        </li>
+        <li>
+          <i class="fas fa-key"></i><a href="https://keybase.io/emilyaviva">Keybase</a>
+        </li>
+        <li>
+          <i class="fab fa-twitter"></i><a href="https://twitter.com/emilyaviva">Twitter</a>
+        </li>
+        <li>
+          <i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/emilykapor">LinkedIn</a>
+        </li>
+      </ul>
+      <ul class="contact-list">
+        <li>
+          <i class="fas fa-envelope"></i><a href="mailto:emily@emilyaviva.com">emily@emilyaviva.com</a>
+        </li>
+        <li>
+          <i class="fas fa-lock"></i><a href="https://keybase.io/encrypt#emilyaviva">Encrypted messaging via PGP</a>
+        </li>
+      </ul>
+      <ul class="contact-list">
+        <li>
+          <i class="fas fa-phone"></i><a href="tel:16174449089">+1.617.444.9089</a>
+        </li>
+      </ul>
     </main>
     {% endblock content %}
 

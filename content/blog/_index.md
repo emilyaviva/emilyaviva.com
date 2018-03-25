@@ -1,4 +1,4 @@
 +++
 sort_by = "date"
-template = "index.html"
+template = "blog_index.html"
 +++
