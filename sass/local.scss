@@ -75,12 +75,18 @@ main {
   }
 }
 
-header {
+header, footer {
+  svg {
+    padding-right: 6px;
+  }
+  a {
+    text-decoration: none;
+    color: $header-color;
+    text-shadow: none;
+    background: none;
+  }
   font-family: $header-typeface-family;
   font-weight: 400;
-  height: inherit;
-  background-image: linear-gradient($brand-primary, $brand-white);
-  padding: 12px 0 24px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -88,6 +94,12 @@ header {
   @media (max-width: $break-small) {
     display: block;
   }
+}
+
+header {
+  height: inherit;
+  background-image: linear-gradient($brand-primary, $brand-white);
+  padding: 12px 0 24px;
   .site-title {
     margin-left: 12px;
     @media (max-width: $break-small) {
@@ -115,10 +127,29 @@ header {
       margin: 6px 12px;
     }
   }
-  a {
-    text-decoration: none;
-    color: $header-color;
-    text-shadow: none;
+}
+
+footer {
+  background-image: linear-gradient($brand-white, $brand-primary);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: $base-line-height * 2;
+  @media (min-width: $break-small) {
+    div {
+      &:first-of-type {
+        margin-left: 24px;
+      }
+      &:last-of-type {
+        margin-right: 24px;
+      }
+    }
+  }
+  @media (max-width: $break-small) {
+    div {
+      margin-left: 6px;
+    }
+    padding: 9px 0;
   }
 }
 
