@@ -42,9 +42,9 @@ I wrote this interpreted version of the Al Cheyt several years ago and used it a
 #### Yud
 *Be-yetzer ha-ra*: We have sinned against You by not resisting the impulse to evil. We succumb to our desires and our base emotions, and we do not fight back. We know we might not win the fight, so we just don't engage.
 
-> *Ve-al kulam, Eloah seliḥot, selaḥ lanu, meḥal lanu, kaper lanu.*
+*Ve-al kulam, Eloah seliḥot, selaḥ lanu, meḥal lanu, kaper lanu.*
 
-> And for all of them, God of forgiveness, forgive us, pardon us, let us atone.
+And for all of them, God of forgiveness, forgive us, pardon us, let us atone.
 
 #### Kaf
 *Be-chaḥash u-ve-chazav*: We have sinned against You by fraud and falsehood. We overrepresent ourselves and our talents. We take on obligations we know we will be unable to meet.
