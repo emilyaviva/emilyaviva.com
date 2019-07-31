@@ -1,4 +1,2 @@
 .DS_Store
-static/files
-static/images
-public
+node_modules
